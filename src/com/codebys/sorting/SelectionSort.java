@@ -53,10 +53,9 @@ public class SelectionSort extends BaseSort {
 		}
 	}
 	
+	// Test
 	public static void main(String[] args) {
-		
 		Integer a[] = new Integer[]{2,4,8,1,3,9,10,16,5};
-		
 		SelectionSort.sort(a);
 	}
 }
