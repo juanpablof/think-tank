@@ -42,4 +42,17 @@ public abstract class BaseSort {
 		}
 		return true;
 	}
+	
+	/**
+	 * Check whether the array is sorted or not.
+	 * @param a
+	 * @return true / false.
+	 */
+	protected static boolean isSorted(Comparable<?>[] a, int lo, int hi){
+		for (int i = lo; i < hi; i++) {
+			if(!less(a[i], a[i+1]))
+					return false;
+		}
+		return true;
+	}
 }

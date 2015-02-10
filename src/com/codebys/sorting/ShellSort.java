@@ -24,7 +24,10 @@ public class ShellSort extends BaseSort {
 		int h = 1;
 		
 		// why h=3*h-1? So, it's easy to compute.
-		while(h < size/3) h = 3*h +1;
+		while(h < size/3) {
+			h = 3*h +1;
+			System.out.println("h:value "+h);
+		}
 		
 		// when each sub-array = 1, then
 		// the array must be sorted.
@@ -33,11 +36,12 @@ public class ShellSort extends BaseSort {
 			// back j-h.
 			for(int i = h; i < size; i++)
 			{
+				//We are going h-back instead of going 1 back like the 
+				//traditional insertion sort.
 				for(int j = i; j>= h;j-=h){
 					if(less(a[j],a[j-h]))
 						exch(a, j, j-h);
 				}
-				
 			}
 			// decrement h to create smaller groups (sub-arrays)
 			// in order to perform insertion sort. 
@@ -50,7 +54,6 @@ public class ShellSort extends BaseSort {
 	}
 	
 	public static void main(String[] args) {
-		
 		Integer a[] = new Integer[]{2,4,8,1,3,9,10,16,5};
 		ShellSort.sort(a);
 	}

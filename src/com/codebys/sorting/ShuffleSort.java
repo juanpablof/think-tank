@@ -25,6 +25,7 @@ public class ShuffleSort extends BaseSort{
 		// How to re-arrange the array in linear time? Every time
 		// we pick an number between 1 and i an swap values.
 		for(int i=0; i < N; i++){
+			// next int value between 0 (inclusive) and i+1 (exclusive)
 			int r = random.nextInt(i+1);
 			System.out.println(r);
 			exch(a,i,r);

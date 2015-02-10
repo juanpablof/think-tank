@@ -1,5 +1,6 @@
 package com.codebys.sorting;
 
+
 /**
  * In iteration i, find index min of smallest remaining entry.
  * Swap a[i] and a[min].
@@ -47,7 +48,6 @@ public class SelectionSort extends BaseSort {
 		}
 		
 		for (int i = 0; i < N; i++) {
-			
 			System.out.println(a[i]);
 		
 		}
