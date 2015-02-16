@@ -6,7 +6,7 @@ package com.codebys.cracking.strings;
  * 
  * @author juanpablof@gmail.com
  */
-public class StringWithUniqueCharacters {
+public class UniqueCharacters {
 	
 	public static boolean checkUniqueChars(String testString) {
 	
@@ -26,6 +26,6 @@ public class StringWithUniqueCharacters {
 	
 	public static void main(String[] args) {
 		String val = "abcdefghijlmnop";
-		System.out.println(String.format("String %s - uniqueness guarantee %s", val, StringWithUniqueCharacters.checkUniqueChars(val)+""));
+		System.out.println(String.format("String %s - uniqueness guarantee %s", val, UniqueCharacters.checkUniqueChars(val)+""));
 	}
 }
