@@ -1,6 +1,5 @@
 package com.codebys.cracking.arrays;
 
-import java.util.Random;
 
 /**
  * Given an image represented by an NxN matrix, where each pixel in the image is 
@@ -13,7 +12,6 @@ public class RotateImage90 {
 	public static void rotateMatrix(int[][] matrix, int n) {
 
 		for (int layer = 0; layer < n / 2; ++layer) {
-
 			int first = layer;
 			int last = n - 1 - layer;
 			for (int i = first; i < last; ++i) {
@@ -32,17 +30,22 @@ public class RotateImage90 {
 	}
 
 	public static void main(String[] args) {
-		int N = 5;
+		int N = 3;
+		
 		int matrix[][] = new int[N][N];
-		Random random = new Random();
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				int val = random.nextInt(N);
-				matrix[i][j] = val;
-			}
-		}
+		
+		matrix[0][0] = 1;
+		matrix[0][1] = 2;
+		matrix[0][2] = 3;
+		matrix[1][0] = 4;
+		matrix[1][1] = 5;
+		matrix[1][2] = 6;
+		matrix[2][0] = 7;
+		matrix[2][1] = 8;
+		matrix[2][2] = 9;
+		
 		printMatrix(matrix);
-		rotateMatrix(matrix,5);
+		rotateMatrix(matrix,3);
 		printMatrix(matrix);
 	}
 
